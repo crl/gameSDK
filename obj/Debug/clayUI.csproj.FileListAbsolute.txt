@@ -1,0 +1,12 @@
+E:\workspaces\clayUI\obj\Debug\clayUI.csprojResolveAssemblyReference.cache
+E:\workspaces\clayUI\bin\Debug\clayUI.dll
+E:\workspaces\clayUI\bin\Debug\clayUI.pdb
+E:\workspaces\clayUI\bin\Debug\foundation.dll
+E:\workspaces\clayUI\bin\Debug\UnityEditor.dll
+E:\workspaces\clayUI\bin\Debug\UnityEngine.dll
+E:\workspaces\clayUI\bin\Debug\UnityEngine.UI.dll
+E:\workspaces\clayUI\bin\Debug\PlayMaker.dll
+E:\workspaces\clayUI\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\workspaces\clayUI\bin\Debug\foundation.pdb
+E:\workspaces\clayUI\obj\Debug\clayUI.dll
+E:\workspaces\clayUI\obj\Debug\clayUI.pdb

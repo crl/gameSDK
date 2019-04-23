@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81FB7E7D-6239-4165-99AC-7D8B170C9411}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gameSDK</RootNamespace>
+    <AssemblyName>gameSDK</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITY_EDITOR,UNITY_5_6,UNITY_5_4_OR_NEWER,UNITY_5_6_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>..\foundation\libs\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\foundation\libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\foundation\libs\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\clayUI\component\AbstractPageList.cs" />
+    <Compile Include="src\clayUI\component\Alert.cs" />
+    <Compile Include="src\clayUI\component\BaseProgressBar.cs" />
+    <Compile Include="src\clayUI\component\IconSlot.cs" />
+    <Compile Include="src\clayUI\component\ImageMovieClip.cs" />
+    <Compile Include="src\clayUI\component\IPageListRef.cs" />
+    <Compile Include="src\clayUI\component\itemRender\SkinBaseItemRender.cs" />
+    <Compile Include="src\clayUI\component\MPageList.cs" />
+    <Compile Include="src\clayUI\component\NumericStepper.cs" />
+    <Compile Include="src\clayUI\component\PageList.cs" />
+    <Compile Include="src\clayUI\component\tab\TabItem.cs" />
+    <Compile Include="src\clayUI\component\tab\TabNav.cs" />
+    <Compile Include="src\clayUI\component\toggle\ToggleButton.cs" />
+    <Compile Include="src\clayUI\component\toggle\ToggleGroup.cs" />
+    <Compile Include="src\clayUI\component\TouchPageList.cs" />
+    <Compile Include="src\clayUI\component\UIDepth.cs" />
+    <Compile Include="src\clayUI\component\UITip.cs" />
+    <Compile Include="src\clayUI\component\VerticalPageList.cs" />
+    <Compile Include="src\clayUI\component\ViewList.cs" />
+    <Compile Include="src\clayUI\core\IntVector2.cs" />
+    <Compile Include="src\clayUI\core\ITabItem.cs" />
+    <Compile Include="src\clayUI\core\SkinFactory.cs" />
+    <Compile Include="src\clayUI\dragdrop\AbstractDragger.cs" />
+    <Compile Include="src\clayUI\dragdrop\DragManager.cs" />
+    <Compile Include="src\clayUI\page\AbstractPage.cs" />
+    <Compile Include="src\clayUI\page\Page.cs" />
+    <Compile Include="src\clayUI\page\PageControl.cs" />
+    <Compile Include="src\gameSDK\action\ActionBase.cs" />
+    <Compile Include="src\gameSDK\action\GameAction.cs" />
+    <Compile Include="src\gameSDK\action\MoveState.cs" />
+    <Compile Include="src\gameSDK\app\AnimatorControlerApp.cs" />
+    <Compile Include="src\gameSDK\core\IDelegateContainer.cs" />
+    <Compile Include="src\gameSDK\core\IPanel.cs" />
+    <Compile Include="src\gameSDK\extensions\GameObjectExtensions.cs" />
+    <Compile Include="src\gameSDK\goods\AbstractGoodsProxy.cs" />
+    <Compile Include="src\gameSDK\goods\AbstractItemVO.cs" />
+    <Compile Include="src\gameSDK\goods\GoodsType.cs" />
+    <Compile Include="src\gameSDK\managers\BaseActorManager.cs" />
+    <Compile Include="src\gameSDK\managers\BaseApp.cs" />
+    <Compile Include="src\gameSDK\managers\BaseEffectManager.cs" />
+    <Compile Include="src\gameSDK\managers\BaseObjectManager.cs" />
+    <Compile Include="src\gameSDK\managers\BaseRaderManager.cs" />
+    <Compile Include="src\gameSDK\managers\BaseRigsterUtils.cs" />
+    <Compile Include="src\gameSDK\managers\BaseSceneManager.cs" />
+    <Compile Include="src\gameSDK\managers\BaseSkillManager.cs" />
+    <Compile Include="src\gameSDK\managers\IRaderManager.cs" />
+    <Compile Include="src\gameSDK\managers\part\ApplicationVersion.cs" />
+    <Compile Include="src\gameSDK\managers\PlatformSDK.cs" />
+    <Compile Include="src\gameSDK\managers\part\LocationService.cs" />
+    <Compile Include="src\gameSDK\managers\part\MobileBlur.cs" />
+    <Compile Include="src\gameSDK\managers\part\PostPanelEffect.cs" />
+    <Compile Include="src\gameSDK\managers\ResizeMananger.cs" />
+    <Compile Include="src\gameSDK\managers\TwoDRender.cs" />
+    <Compile Include="src\gameSDK\managers\TwoDRenderItem.cs" />
+    <Compile Include="src\gameSDK\minimvc\AbstractPanel.cs" />
+    <Compile Include="src\gameSDK\minimvc\CallReferrer.cs" />
+    <Compile Include="src\gameSDK\minimvc\injector\MVCInject.cs" />
+    <Compile Include="src\gameSDK\minimvc\interfaces\IFacade.cs" />
+    <Compile Include="src\gameSDK\interface\ILoadingUI.cs" />
+    <Compile Include="src\gameSDK\minimvc\interfaces\IMediator.cs" />
+    <Compile Include="src\gameSDK\minimvc\interfaces\IMVCHost.cs" />
+    <Compile Include="src\gameSDK\minimvc\interfaces\IProxy.cs" />
+    <Compile Include="src\gameSDK\interface\IRarelevel.cs" />
+    <Compile Include="src\gameSDK\minimvc\interfaces\IView.cs" />
+    <Compile Include="src\gameSDK\minimvc\PanelDelegate.cs" />
+    <Compile Include="src\gameSDK\minimvc\patterns\Facade.cs" />
+    <Compile Include="src\gameSDK\minimvc\patterns\Mediator.cs" />
+    <Compile Include="src\gameSDK\minimvc\patterns\Proxy.cs" />
+    <Compile Include="src\gameSDK\minimvc\patterns\View.cs" />
+    <Compile Include="src\gameSDK\net\BaseSocketDecoder.cs" />
+    <Compile Include="src\gameSDK\net\IFileVersion.cs" />
+    <Compile Include="src\gameSDK\net\SocketX.cs" />
+    <Compile Include="src\gameSDK\net\socket\AbsServerInfoVO.cs" />
+    <Compile Include="src\gameSDK\net\socket\IMessageExtensible.cs" />
+    <Compile Include="src\gameSDK\net\socket\ISocket.cs" />
+    <Compile Include="src\gameSDK\net\socket\ISocketDecoder.cs" />
+    <Compile Include="src\gameSDK\net\socket\ISocketSender.cs" />
+    <Compile Include="src\gameSDK\net\socket\ServerVO.cs" />
+    <Compile Include="src\gameSDK\net\socket\SocketRouter.cs" />
+    <Compile Include="src\gameSDK\objects\BaseEffectObject.cs" />
+    <Compile Include="src\gameSDK\objects\BaseObject.cs" />
+    <Compile Include="src\gameSDK\objects\GhostObject.cs" />
+    <Compile Include="src\gameSDK\objects\ImageObject.cs" />
+    <Compile Include="src\gameSDK\objects\ObjectType.cs" />
+    <Compile Include="src\gameSDK\objects\RemotePrefab.cs" />
+    <Compile Include="src\gameSDK\objects\undo\AnimatorControllerParameterValueStore.cs" />
+    <Compile Include="src\gameSDK\objects\undo\MaterialStore.cs" />
+    <Compile Include="src\gameSDK\objects\undo\MeshStore.cs" />
+    <Compile Include="src\gameSDK\skill\BaseSkill.cs" />
+    <Compile Include="src\gameSDK\skill\events\CameraMoveEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\CameraShakeEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\EffectCreateEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\EffectFollowEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\EmptyEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\FlashShowEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\GhostEffectEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\MoveEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\PlayAnimEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\PlaySoundEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\SetAnimationBoolEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\SkillEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\TimeScaleEvent.cs" />
+    <Compile Include="src\gameSDK\skill\events\TrigerEvent.cs" />
+    <Compile Include="src\gameSDK\skill\EventTargetType.cs" />
+    <Compile Include="src\gameSDK\skill\logic\SkillLine.cs" />
+    <Compile Include="src\gameSDK\skill\logic\SkillPoint.cs" />
+    <Compile Include="src\gameSDK\skill\SkillExData.cs" />
+    <Compile Include="src\gameSDK\skill\vo\ISkillEvent.cs" />
+    <Compile Include="src\gameSDK\skill\vo\SkillLineVO.cs" />
+    <Compile Include="src\gameSDK\skill\vo\SkillPointVO.cs" />
+    <Compile Include="src\gameSDK\skill\vo\SkillVO.cs" />
+    <Compile Include="src\gameSDK\stateMachine\ai\AbstractAIState.cs" />
+    <Compile Include="src\gameSDK\stateMachine\ai\AIStateMachine.cs" />
+    <Compile Include="src\gameSDK\stateMachine\ai\IAIState.cs" />
+    <Compile Include="src\gameSDK\stateMachine\ai\IGoal.cs" />
+    <Compile Include="src\gameSDK\stateMachine\CodeVersion.cs" />
+    <Compile Include="src\gameSDK\stateMachine\SceneBase.cs" />
+    <Compile Include="src\gameSDK\stateMachine\SceneBaseCheckVersion.cs" />
+    <Compile Include="src\gameSDK\state\ActorAction.cs" />
+    <Compile Include="src\gameSDK\state\CoreState.cs" />
+    <Compile Include="src\gameSDK\state\StateModel.cs" />
+    <Compile Include="src\gameSDK\state\StateVO.cs" />
+    <Compile Include="src\gameSDK\state\StopActorAction.cs" />
+    <Compile Include="src\gameSDK\story\BaseStoryManager.cs" />
+    <Compile Include="src\gameSDK\story\BaseStoryUI.cs" />
+    <Compile Include="src\gameSDK\story\FadeGUI.cs" />
+    <Compile Include="src\gameSDK\updater\AutoCopyer.cs" />
+    <Compile Include="src\gameSDK\updater\DownloadItem.cs" />
+    <Compile Include="src\gameSDK\updater\UpdateDownloader.cs" />
+    <Compile Include="src\gameSDK\upk\UpkAnimation.cs" />
+    <Compile Include="src\gameSDK\upk\UpkFontRender.cs" />
+    <Compile Include="src\gameSDK\utils\SkyboxSetter.cs" />
+    <Compile Include="src\gameSDK\utils\UITools.cs" />
+    <Compile Include="src\platformSDK\PlatformPayData.cs" />
+    <Compile Include="src\platformSDK\PlatformReporter.cs" />
+    <Compile Include="src\wayPoint\Astar.cs" />
+    <Compile Include="src\wayPoint\BinaryHeap.cs" />
+    <Compile Include="src\wayPoint\CornersSplicer.cs" />
+    <Compile Include="src\wayPoint\Link.cs" />
+    <Compile Include="src\wayPoint\Node.cs" />
+    <Compile Include="src\wayPoint\PathArrowUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\foundation\foundation.csproj">
+      <Project>{255f900a-800f-444f-ba8f-a301fa329de2}</Project>
+      <Name>foundation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)\pdb2mdb" "$(TargetPath)"
+copy "$(TargetPath)" "$(SolutionDir)Assets\Plugins\"
+copy "$(TargetDir)\$(TargetFileName).mdb" "$(SolutionDir)Assets\Plugins\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
